@@ -1,0 +1,195 @@
+@import "./node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* TODO - FIX FONT LOADING */
+/* TODO - Make H1 stand out through thickness? */
+
+:root {
+  font-size: 140%;
+  --primary-color: #666;
+  --secondary-color: #fff;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  margin: 0;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  animation: 1s ease-out 0s 1 fadeIn;
+}
+/*
+  font-family: 'Lato', sans-serif;
+  font-family: 'Nixie One', cursive;
+  font-family: 'Expletus Sans', cursive;
+  font-family: 'Voces', cursive;
+  font-family: 'Nova Square', cursive;
+  font-family: 'Flamenco', cursive;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Share', cursive;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  width: 100%;
+  border-top: 1px dashed var(--primary-color);
+  color: transparent;
+}
+
+footer {
+  padding: 5rem 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  gap: 3rem;
+}
+
+footer i {
+  font-size: 3rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+footer a:hover i,
+footer a:focus i {
+  font-size: 3rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: black;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Nixie One", cursive;
+  font-size: 4rem;
+  margin: 1rem;
+}
+h2 {
+  font-weight: 400;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 0.25rem;
+}
+@media (min-width: 480px) {
+  nav ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+ol {
+  list-style: upper-latin;
+}
+
+nav a {
+  color: inherit;
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  display: block;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+  outline: none;
+}
+
+section {
+  padding: 4rem 2rem 4rem 2rem;
+}
+
+/* note does not work when nested, so really it's not fullscreen */
+.fullScreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullScreen::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.02);
+  z-index: -1;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+}
+
+/* ICONS */
+.fa-react {
+  color: #00d8ff;
+}
+
+.fa-vuejs {
+  color: #3fb984;
+}
+
+.fa-wordpress-simple {
+  color: $464646;
+}
+
+.fab {
+  font-size: 3rem;
+}
+
+ul.tools {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 2rem;
+
+  display: grid;
+
+  grid-auto-flow: column;
+
+  justify-content: center;
+
+  gap: 3rem;
+}
+
+.secondaryStuff {
+  display: inline;
+}
+
+.email-logo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%0Aaria-label='Email' role='img'%0AviewBox='0 0 512 512'%3E%3Crect%0Awidth='512' height='512'%0Arx='15%25'%0Afill='teal'/%3E%3Crect width='356' height='256' x='78' y='128' fill='%23fff' rx='8%25'/%3E%3Cpath fill='none' stroke='teal' stroke-width='20' d='M434 128L269 292c-7 8-19 8-26 0L78 128m0 256l129-128m227 128L305 256'/%3E%3C/svg%3E%0A");
+}

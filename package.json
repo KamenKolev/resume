@@ -1,0 +1,24 @@
+{
+  "name": "kamen-kolev-resume",
+  "version": "0.0.1",
+  "description": "It's supposed to be a webpage that people look at. But not for too long. And then sip beer.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Kamen Kolev",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
+    "humanize-duration": "^3.20.1",
+    "typed.js": "^2.0.10"
+  },
+  "private": true,
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0"
+  }
+}
