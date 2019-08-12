@@ -1,5 +1,3 @@
-@import "./node_modules/@fortawesome/fontawesome-free/css/all.min.css";
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -10,7 +8,8 @@
 }
 
 /* TODO - FIX FONT LOADING */
-/* TODO - Make H1 stand out through thickness? */
+/* TODO: - fix fadein */
+/* TODO: Organize CSS */
 
 :root {
   font-size: 140%;
@@ -18,28 +17,56 @@
   --secondary-color: #fff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-
   margin: 0;
   text-align: center;
   font-family: "Lato", sans-serif;
+  opacity: 0;
+}
+body.fonts-loaded {
+  opacity: 1;
   animation: 1s ease-out 0s 1 fadeIn;
 }
-/*
-  font-family: 'Lato', sans-serif;
-  font-family: 'Nixie One', cursive;
-  font-family: 'Expletus Sans', cursive;
-  font-family: 'Voces', cursive;
-  font-family: 'Nova Square', cursive;
-  font-family: 'Flamenco', cursive;
-  font-family: 'Comfortaa', cursive;
-  font-family: 'Share', cursive;
-*/
 
-* {
-  box-sizing: border-box;
+h1,
+h2 {
+  color: black;
+}
+
+h3 {
+  color: #444;
+}
+
+h1 {
+  font-family: "Nixie One", cursive;
+  font-size: 4rem;
+  margin: 1rem;
+}
+h2 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  transition: 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+  outline: none;
 }
 
 hr {
@@ -58,43 +85,45 @@ footer {
   gap: 3rem;
 }
 
-footer i {
-  font-size: 3rem;
+section {
+  margin: 10rem 2rem 10rem 2rem;
+}
+
+section:first-of-type {
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactLink {
+  border-radius: 50%;
+}
+
+.contactLink .contactIcon {
+  width: 4rem;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: var(--primary-color);
   color: var(--secondary-color);
+  background-color: white;
+  transition: background-color 0.3s ease;
 }
-footer a:hover i,
-footer a:focus i {
-  font-size: 3rem;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+
+.contactLink:hover .contactIcon,
+.contactLink:focus .contactIcon {
+  background-color: #ffb900;
   transition: 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: black;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Nixie One", cursive;
-  font-size: 4rem;
-  margin: 1rem;
-}
-h2 {
-  font-weight: 400;
-}
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 0.25rem;
 }
 @media (min-width: 480px) {
@@ -114,82 +143,27 @@ nav a {
   display: block;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  transition: 0.3s ease;
-  outline: none;
-}
-
-section {
-  padding: 4rem 2rem 4rem 2rem;
-}
-
-/* note does not work when nested, so really it's not fullscreen */
-.fullScreen {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.fullScreen::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.02);
-  z-index: -1;
-}
 
 .container {
   max-width: 768px;
   margin: auto;
 }
 
-/* ICONS */
-.fa-react {
-  color: #00d8ff;
-}
-
-.fa-vuejs {
-  color: #3fb984;
-}
-
-.fa-wordpress-simple {
-  color: $464646;
-}
-
-.fab {
-  font-size: 3rem;
-}
-
 ul.tools {
   list-style: none;
-
   margin: 0;
-
   padding: 2rem;
-
   display: grid;
-
-  grid-auto-flow: column;
-
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
-
   gap: 3rem;
+}
+ul.tools li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .secondaryStuff {
   display: inline;
-}
-
-.email-logo {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%0Aaria-label='Email' role='img'%0AviewBox='0 0 512 512'%3E%3Crect%0Awidth='512' height='512'%0Arx='15%25'%0Afill='teal'/%3E%3Crect width='356' height='256' x='78' y='128' fill='%23fff' rx='8%25'/%3E%3Cpath fill='none' stroke='teal' stroke-width='20' d='M434 128L269 292c-7 8-19 8-26 0L78 128m0 256l129-128m227 128L305 256'/%3E%3C/svg%3E%0A");
 }

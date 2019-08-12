@@ -1,6 +1,11 @@
 import Typed from "typed.js"
 import humanizeDuration from "humanize-duration"
 
+// there is no error handling here
+document.fonts.ready
+  .then(e => document.body.classList.add("fonts-loaded"))
+  .catch(() => document.body.classList.add("fonts-loaded"))
+
 let timePassed = 0
 
 setInterval(() => {

@@ -8,19 +8,18 @@
       user-scalable="yes"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kamen Kolev</title>
+    <link rel="icon" href="assets/icon_compressed.png" />
+    <title>Kamen Kolev Resume</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- fonts -->
-
     <link
-      href="https://fonts.googleapis.com/css?family=Audiowide|Lato|Nixie+One"
+      href="https://fonts.googleapis.com/css?family=Lato|Nixie+One&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
-      <section class="fullScreen">
-        <div class="mainSectionInner">
+      <section>
+        <div>
           <hgroup>
             <hr />
             <h1>Kamen Kolev</h1>
@@ -30,22 +29,31 @@
           <nav>
             <ul>
               <li><a href="/#about">About</a></li>
-              <li><a href="/#experience">Experience</a></li>
+              <li><a href="/#work">Work</a></li>
               <li><a href="/#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
       </section>
       <section id="about">
-        Hi, I'm Kamen Kolev and I write code. That's the long and short of it.
-        <br />
-        I love solving problems in a clean and concise fashion.
+        <h2>
+          Hi, I'm Kamen Kolev and I write code.
+        </h2>
+        <hr />
+        <p>
+          That's the long and short of it.
+        </p>
+        <p>
+          I love solving problems in a clean and concise fashion.
+        </p>
         <br />
         My preferred tools are:
         <ul class="tools">
-          <li><i class="fab fa-react"></i></li>
-          <li><i class="fab fa-vuejs"></i></li>
-          <li><i class="fab fa-wordpress-simple"></i></li>
+          <li><img src="./assets/iconfinder_react.svg" alt="react" /></li>
+          <li><img src="./assets/vue-logo.svg" alt="vue" /></li>
+          <li>
+            <img src="./assets/iconfinder_wordpress.svg" alt="wordpress" />
+          </li>
         </ul>
         <p>
           But I've also dabbled with:
@@ -57,17 +65,21 @@
         <h2>Work</h2>
 
         <h3>LuckyLabz - Web Developer</h3>
+        <hr />
         <p>
-          I inherited the development role for one of the company's larger
-          projects and managed to add key features while dramatically improving
-          user experience, SEO and page load times.
+          I worked at Luckylabz for the better part of a year. There I took the
+          role of sole developer for one of the company's larger websites. I
+          integrated multiple key features while at the same time resolving
+          critical problems. By the end of it, the website had dramatically
+          improved UX, security, SEO and page load times.
         </p>
       </section>
 
       <section>
         <h2>Thanks</h2>
+        <hr />
+        <!-- TODO: Maybe add a JS-less fallback?-->
         <p>
-          <!-- Given the fact that this page is designed to be skimmed through, this might not be a good fit -->
           You’ve just spent <span id="timeSpent"></span> looking at my homepage.
           <br />
           Time is the most important thing we have, and unfortunately you will
@@ -83,10 +95,18 @@
     </div>
     <footer>
       <a class="contactLink" href="mailto:kkolev@protonmail.com">
-        <i class="fa fa-envelope"></i>
+        <img
+          class="contactIcon"
+          src="./assets/iconfinder_mail.svg"
+          alt="email"
+        />
       </a>
       <a class="contactLink" href="https://github.com/KamenKolev/">
-        <i class="fab fa-github"></i>
+        <img
+          class="contactIcon"
+          src="./assets/iconfinder_github.svg"
+          alt="github"
+        />
       </a>
     </footer>
     <script src="/index.js"></script>
