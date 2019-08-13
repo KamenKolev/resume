@@ -227,7 +227,15 @@ form#contactForm {
     transition: background-color 0.3s ease;
 
     &:disabled {
-      color: #ddd;
+      cursor: default;
+
+      :not(.success) {
+        color: #ddd;
+      }
+
+      .success {
+        background-color: #43dd76;
+      }
     }
 
     &:not(:disabled):hover,

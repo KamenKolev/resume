@@ -46,6 +46,10 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   }).then(res => {
     const btn = this.querySelector("button")
     btn.disabled = true
+    if (res.ok) {
+      btn.innerHTML = "Message Delivered"
+      btn.classList.add("success")
+    } else btn.innerHTML = "Something's not right<br/>Maybe try my email"
     btn.innerHTML = res.ok
       ? "Message Delivered"
       : "Something's not right<br/>Maybe try my email"
