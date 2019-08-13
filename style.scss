@@ -228,14 +228,13 @@ form#contactForm {
 
     &:disabled {
       cursor: default;
-
-      :not(.success) {
-        color: #ddd;
-      }
-
-      .success {
-        background-color: #43dd76;
-      }
+    }
+    &:not(.success):disabled {
+      color: #ddd;
+    }
+    // I have no clue why this isn't working
+    &.success:disabled {
+      background-color: #43dd76;
     }
 
     &:not(:disabled):hover,
