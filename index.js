@@ -33,5 +33,3 @@ new Typed(".secondaryStuff", {
   typeSpeed: 100,
   loop: true,
 })
-
-// TODO: trim dependencies

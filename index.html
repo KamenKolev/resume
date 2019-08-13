@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="assets/icon_compressed.png" />
     <title>Kamen Kolev Resume</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.scss" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato|Nixie+One&display=swap"
       rel="stylesheet"
@@ -27,10 +27,10 @@
             <hr />
           </hgroup>
           <nav>
-            <ul>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#work">Work</a></li>
-              <li><a href="/#contact">Contact</a></li>
+            <ul class="navLinks">
+              <li><a class="navLink" href="/#about">About</a></li>
+              <li><a class="navLink" href="/#work">Work</a></li>
+              <li><a class="navLink" href="/#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -49,9 +49,11 @@
         <br />
         My preferred tools are:
         <ul class="tools">
-          <li><img src="./assets/iconfinder_react.svg" alt="react" /></li>
-          <li><img src="./assets/vue-logo.svg" alt="vue" /></li>
-          <li>
+          <li class="tool">
+            <img src="./assets/iconfinder_react.svg" alt="react" />
+          </li>
+          <li class="tool"><img src="./assets/vue-logo.svg" alt="vue" /></li>
+          <li class="tool">
             <img src="./assets/iconfinder_wordpress.svg" alt="wordpress" />
           </li>
         </ul>
@@ -78,22 +80,24 @@
       <section>
         <h2>Thanks</h2>
         <hr />
-        <!-- TODO: Maybe add a JS-less fallback?-->
         <p>
-          You’ve just spent <span id="timeSpent"></span> looking at my homepage.
+          You’ve just spent <span id="timeSpent"></span
+          ><noscript><span>quite a while</span></noscript> looking at my
+          homepage.
           <br />
           Time is the most important thing we have, and unfortunately you will
           never get it back, so thank you very much for sharing it with me.
           <br />
           If I were you, I would think about one of the 2 following options:
         </p>
-        <ol>
+        <ol class="readOptions">
           <li>Drop me a line and let me learn something about you</li>
+          <br />
           <li>Get away from this screen and grab a 🍺</li>
         </ol>
       </section>
     </div>
-    <footer>
+    <footer id="contact">
       <a class="contactLink" href="mailto:kkolev@protonmail.com">
         <img
           class="contactIcon"
