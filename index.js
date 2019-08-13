@@ -40,10 +40,14 @@ new Typed(".secondaryStuff", {
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault()
 
-  debugger
-
   fetch(this.action, {
     method: "POST",
     body: new FormData(this),
+  }).then(res => {
+    const btn = this.querySelector("button")
+    btn.disabled = true
+    btn.innerHTML = res.ok
+      ? "Message Delivered"
+      : "Something's not right<br/>Maybe try my email"
   })
 })

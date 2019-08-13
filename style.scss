@@ -226,8 +226,12 @@ form#contactForm {
     border: none;
     transition: background-color 0.3s ease;
 
-    &:hover,
-    &:focus {
+    &:disabled {
+      color: #ddd;
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
       background-color: var(--accent-color);
       transition: 0.3s ease;
     }
@@ -235,6 +239,7 @@ form#contactForm {
 }
 
 // for my own convenience
-grammarly-ghost {
+grammarly-ghost,
+grammarly-btn {
   display: none;
 }
