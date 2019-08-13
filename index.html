@@ -81,7 +81,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="contact">
         <h2>Thanks</h2>
         <hr />
         <p>
@@ -94,13 +94,37 @@
           <br />
           If I were you, I would think about one of the 2 following options:
         </p>
-        <ol class="readOptions">
-          <li>Drop me a line and let me learn something about you</li>
-          <li>Get away from this screen and grab a 🍺</li>
-        </ol>
+
+        <strong>A) Drop me a line and let me learn something about you</strong>
+        <!-- TODO: form elements must not appear invalid initially -->
+        <!-- checking should be disabled until a user clicks on the Send button -->
+        <form id="contactForm" name="contact" method="POST" netlify>
+          <input
+            required
+            placeholder="What's your name?"
+            type="text"
+            name="name"
+          />
+          <input
+            required
+            placeholder="Your Email Address?"
+            type="email"
+            name="email"
+          />
+          <textarea
+            minlength="1"
+            required
+            name="message"
+            rows="4"
+            placeholder=" "
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <strong>B) Get away from this screen and grab a 🍺</strong>
       </section>
     </div>
-    <footer id="contact">
+    <footer>
       <a class="contactLink" href="mailto:kkolev@protonmail.com">
         <img
           class="contactIcon"

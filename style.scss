@@ -1,3 +1,9 @@
+// TODO: implement proper margins for the contact section
+// TODO: extract color tranistions into mixin?
+// TODO: structure using a CSS convention?
+// TODO: change class casing?
+// TODO: make IE11 compatible?
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -113,7 +119,7 @@ section:first-of-type {
   }
 }
 
-#contact {
+footer {
   padding: 5rem 0;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -134,11 +140,6 @@ section:first-of-type {
       background-color: var(--accent-color);
       transition: 0.3s ease;
     }
-
-    // .contactIcon {
-    //   height: 100%;
-    //   width: 100%;
-    // }
   }
 }
 
@@ -176,4 +177,60 @@ section:first-of-type {
 
 .secondaryStuff {
   display: inline;
+}
+
+form#contactForm {
+  margin: 8rem 0;
+  display: grid;
+  gap: 0.5rem;
+
+  input,
+  textarea,
+  button {
+    padding: 1rem 2rem;
+    resize: none;
+    font-size: 100%;
+    border: 1px solid var(--primary-color);
+  }
+
+  textarea {
+    font-family: "Lato", sans-serif;
+  }
+
+  input:not(:placeholder-shown):invalid,
+  textarea:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+
+  input:invalid,
+  textarea:invalid,
+  input:valid,
+  textarea:valid {
+    box-shadow: none;
+  }
+
+  input:valid,
+  textarea:valid {
+    border-color: #43dd76;
+  }
+
+  // should this button use the same styles as the navlinks?
+  button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      transition: 0.3s ease;
+    }
+  }
+}
+
+// for my own convenience
+grammarly-ghost {
+  display: none;
 }

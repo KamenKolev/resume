@@ -2,6 +2,7 @@ import Typed from "typed.js"
 import humanizeDuration from "humanize-duration"
 
 // there is no proper error handling here
+// TODO: if no JS, everythign is invisible!
 document.fonts
   ? document.fonts.ready
       .then(e => document.body.classList.add("fonts-loaded"))
@@ -34,4 +35,15 @@ new Typed(".secondaryStuff", {
   strings: secondaryStuff,
   typeSpeed: 100,
   loop: true,
+})
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault()
+
+  debugger
+
+  fetch(this.action, {
+    method: "POST",
+    body: new FormData(this),
+  })
 })
